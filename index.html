@@ -1,231 +1,238 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天使按摩 - 温暖怀旧 老年康养</title>
+    <title>Angel Massage - Twin Falls, ID</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* --- 基础设置 --- */
+        /* ----------- Overall Theme ----------- */
+        :root {
+            --cream: #F8F5F0;      /* 温暖奶油色背景 */
+            --green: #355E47;      /* 深绿色标题 */
+            --brown: #7A4A2F;      /* 温暖点缀色 */
+            --text: #333;
+            --box: #ffffff;
+            --border: #dacfbf;
+        }
+
         body {
-            font-family: "楷体", "KaiTi", "STKaiti", serif; /* 使用楷体，更有书卷气和怀旧感 */
-            background-color: #f9f3e3; /* 米黄色背景，护眼且怀旧 */
-            color: #4a3b2a; /* 深褐色文字，对比度高但不刺眼 */
+            background: var(--cream);
             margin: 0;
             padding: 0;
-            line-height: 1.8; /* 增加行距，方便阅读 */
-            font-size: 18px; /* 基础字体调大 */
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text);
         }
 
-        a {
-            text-decoration: none;
-            color: #8c3b2e; /* 朱红色链接 */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--green);
         }
 
-        /* --- 布局容器 --- */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fffef8;
-            border-left: 1px solid #dccdb3;
-            border-right: 1px solid #dccdb3;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-        }
+        a { color: var(--green); text-decoration: none; }
 
-        /* --- 顶部导航 --- */
+        /* ----------- Header ----------- */
         header {
             text-align: center;
-            padding: 40px 0 20px 0;
-            border-bottom: 3px double #8c3b2e; /* 双线边框，经典设计 */
-            margin-bottom: 30px;
+            padding: 28px 0;
+            background: #fff;
+            border-bottom: 4px solid var(--green);
         }
 
-        h1 {
-            font-size: 42px;
-            margin: 10px 0;
-            color: #8c3b2e; /* 朱红色标题 */
-            font-weight: normal;
+        .logo {
+            font-size: 44px;
+            font-weight: 700;
         }
 
-        .subtitle {
+        .tagline {
             font-size: 20px;
-            color: #6e5a4b;
+            margin-top: 5px;
+            font-style: italic;
+            color: var(--brown);
         }
 
-        nav {
-            margin-top: 20px;
-            background-color: #e8dec3;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            font-size: 22px;
-            font-weight: bold;
-            display: inline-block; /* 增大点击区域 */
-        }
-
-        /* --- 内容区块 --- */
-        .section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #e6dcca;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-
-        h2 {
-            font-size: 28px;
-            border-left: 8px solid #8c3b2e; /* 左侧红条装饰 */
-            padding-left: 15px;
-            margin-bottom: 20px;
-            background-color: #f4ebd0;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        /* --- 服务列表 --- */
-        .service-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dashed #cbbba0;
-            padding: 15px 0;
-            font-size: 20px;
-        }
-
-        .service-name {
-            font-weight: bold;
-        }
-
-        .service-price {
-            color: #8c3b2e;
-            font-weight: bold;
-        }
-
-        /* --- 大按钮 --- */
-        .btn-call {
-            display: block;
-            width: 100%;
-            background-color: #8c3b2e;
-            color: #fff !important;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 24px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-call:hover {
-            background-color: #a64d3f;
-        }
-
-        /* --- 页脚 --- */
-        footer {
-            text-align: center;
-            font-size: 16px;
-            color: #887666;
-            margin-top: 50px;
-            padding-bottom: 20px;
-            border-top: 1px solid #dccdb3;
-            padding-top: 20px;
-        }
-
-        /* --- 图片占位符样式 (你可以替换为真实图片) --- */
-        .hero-image {
-            width: 100%;
-            height: 300px;
-            background-color: #e6dcca;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #887666;
-            font-size: 24px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            background-image: url('https://images.unsplash.com/photo-1600334019640-51026cfb7441?q=80&w=1000&auto=format&fit=crop'); /* 这是一个温暖的茶/按摩相关示意图 */
+        /* ----------- Hero ----------- */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=70');
             background-size: cover;
             background-position: center;
+            height: 360px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* --- 手机端适配 --- */
-        @media (max-width: 600px) {
-            h1 { font-size: 32px; }
-            nav a { display: block; margin: 10px 0; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-            .service-item { flex-direction: column; }
-            .service-price { margin-top: 5px; }
+        .hero-box {
+            background: rgba(255,255,255,0.85);
+            padding: 36px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .hero h2 { font-size: 34px; margin-bottom: 10px; }
+
+        .btn-call {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 14px 34px;
+            background: var(--brown);
+            color: #fff;
+            font-size: 22px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* ----------- Container ----------- */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: var(--box);
+            border: 1px solid var(--border);
+            padding: 36px;
+            margin-bottom: 40px;
+            border-top: 5px solid var(--green);
+            border-radius: 6px;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* ----------- Service Rows ----------- */
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px dashed #cfc7bd;
+            font-size: 20px;
+        }
+
+        .service-row:last-child { border-bottom: none; }
+
+        .service-name { font-weight: bold; }
+        .service-price {
+            color: var(--brown);
+            font-weight: bold;
+            min-width: 90px;
+            text-align: right;
+        }
+
+        /* ----------- Info Grid ----------- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+        }
+
+        .info-box {
+            background: #F2F7F4;
+            border: 1px solid #d7e7dc;
+            padding: 22px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: #ddd;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 15px;
+        }
+
+        /* ----------- Mobile ----------- */
+        @media (max-width: 700px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .hero { height: 300px; }
+            .logo { font-size: 34px; }
+            .btn-call { font-size: 20px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>天使按摩</h1>
-        <div class="subtitle">Angel Massage · 专注老年健康 · 温暖贴心</div>
-        
-        <nav>
-            <a href="#about">关于我们</a>
-            <a href="#services">服务项目</a>
-            <a href="#contact">联系方式</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">ANGEL MASSAGE</div>
+    <div class="tagline">Relaxation & Wellness in Twin Falls</div>
+</header>
 
-    <!-- 欢迎大图区域 -->
-    <div class="hero-image">
-        <!-- 如果你有自己的照片，可以在这里替换 img 标签 -->
-        <span style="background: rgba(255,255,255,0.8); padding: 10px 20px; border-radius: 5px;">
-            为您拂去岁月的疲惫
-        </span>
+<!-- Hero Banner -->
+<div class="hero">
+    <div class="hero-box">
+        <h2>Full Body Massage</h2>
+        <p style="font-size: 20px; font-weight: 600;">Clean · Safe · Professional · Seniors Welcome</p>
+        <a href="sms:2084105417" class="btn-call">📱 Text (208) 410-5417</a>
     </div>
-
-    <!-- 关于我们 -->
-    <div id="about" class="section">
-        <h2>👵 温暖的故事</h2>
-        <p>欢迎来到天使按摩。我们是一家专注于为银发族提供舒缓放松服务的按摩小站。</p>
-        <p>这里没有嘈杂的音乐，只有温和的手法和像家一样的氛围。我们深知长辈们的肩颈腰腿需要最细致的呵护，每一位技师都拥有超过10年的经验，手法轻柔，懂您所需。</p>
-    </div>
-
-    <!-- 服务项目 -->
-    <div id="services" class="section">
-        <h2>👐 精选服务</h2>
-        
-        <div class="service-item">
-            <span class="service-name">经典中式推拿 (60分钟)</span>
-            <span class="service-price">¥128</span>
-        </div>
-        <p style="font-size: 16px; color: #666;">针对老年人关节僵硬、肌肉酸痛，手法温和渗透。</p>
-
-        <div class="service-item">
-            <span class="service-name">艾草温经足浴 (45分钟)</span>
-            <span class="service-price">¥88</span>
-        </div>
-        <p style="font-size: 16px; color: #666;">使用陈年艾草，促进血液循环，暖身暖心。</p>
-
-        <div class="service-item">
-            <span class="service-name">肩颈舒缓调理 (30分钟)</span>
-            <span class="service-price">¥68</span>
-        </div>
-    </div>
-
-    <!-- 联系方式 -->
-    <div id="contact" class="section">
-        <h2>☎️ 联系我们</h2>
-        <p>如果您想预约或咨询，欢迎随时给我们打电话。如果打字不方便，直接点击下面的红色大按钮即可拨打。</p>
-        
-        <p><strong>地址：</strong> [请在这里填入您的具体地址]</p>
-        <p><strong>营业时间：</strong> 上午 9:00 - 晚上 8:00</p>
-
-        <!-- 电话按钮，手机上点击直接拨打 -->
-        <a href="tel:12345678900" class="btn-call">点击这里 给我们打电话</a>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 天使按摩 | 祝您健康长寿</p>
-    </footer>
 </div>
+
+<div class="container">
+
+    <!-- Services -->
+    <div class="section">
+        <h2>Services & Prices</h2>
+
+        <div class="service-row">
+            <div class="service-name">30 Minutes · Full Body</div>
+            <div class="service-price">$50</div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-name">60 Minutes · Full Body</div>
+            <div class="service-price">$70</div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-name">90 Minutes · Full Body</div>
+            <div class="service-price">$110</div>
+        </div>
+
+        <p style="margin-top: 20px; font-size: 17px; color: #666;">
+            * We offer full body massage only.  
+            * No separate neck, shoulder, or foot-only services.
+        </p>
+    </div>
+
+    <!-- Address & Hours -->
+    <div class="section">
+        <h2>Visit Us</h2>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>📍 Address</h3>
+                <p style="font-size: 20px; font-weight: bold;">
+                    1041 Blue Lakes Blvd N<br>
+                    Twin Falls, ID 83301
+                </p>
+                <a href="https://www.google.com/maps?q=1041+Blue+Lakes+Blvd+N,+Twin+Falls,+ID+83301"
+                   target="_blank">Open in Google Maps →</a>
+            </div>
+
+            <div class="info-box">
+                <h3>🕒 Hours</h3>
+                <p style="font-size: 20px; font-weight: bold; color: var(--green);">
+                    9:00 AM – 8:00 PM<br>
+                    Open 7 Days
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Angel Massage • Twin Falls, Idaho
+</footer>
 
 </body>
 </html>
