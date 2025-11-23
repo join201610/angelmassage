@@ -24,7 +24,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            font-size: 18px;          /* Larger for seniors */
+            font-size: 18px;
             line-height: 1.7;
             color: var(--text);
         }
@@ -42,8 +42,8 @@
         /* ----------- Header ----------- */
         header {
             text-align: center;
-            padding: 28px 0;
-            background: #fff;
+            padding: 34px 0;
+            background: #fff;                   /* Clean white header */
             border-bottom: 4px solid var(--green);
         }
 
@@ -59,35 +59,24 @@
             color: var(--brown);
         }
 
-        /* ----------- Hero ----------- */
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=70');
-            background-size: cover;
-            background-position: center;
-            height: 360px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-box {
-            background: rgba(255,255,255,0.88);
-            padding: 36px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
+        /* ----------- Simple Hero (NO image) ----------- */
+        .hero-simple {
+            background: var(--cream);           /* Warm solid color */
+            padding: 45px 20px;
             text-align: center;
-            max-width: 80%;
+            border-bottom: 1px solid var(--border);
         }
 
-        .hero h2 {
+        .hero-simple h2 {
             font-size: 34px;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            color: var(--green);
         }
 
-        .hero-text {
+        .hero-simple p {
             font-size: 20px;
             font-weight: 600;
-            margin: 8px 0 0;
+            margin: 6px 0;
         }
 
         .btn-call {
@@ -178,9 +167,6 @@
             .info-grid {
                 grid-template-columns: 1fr;
             }
-            .hero {
-                height: 300px;
-            }
             .logo {
                 font-size: 34px;
             }
@@ -197,14 +183,13 @@
     <div class="tagline">Relaxation & Wellness in Twin Falls</div>
 </header>
 
-<!-- Hero Banner -->
-<div class="hero">
-    <div class="hero-box">
-        <h2>Full Body Massage</h2>
-        <p class="hero-text">Clean · Safe · Professional · Seniors Welcome</p>
-        <p class="hero-text">Walk-ins welcome · No appointment required</p>
-        <a href="sms:2084105417" class="btn-call">📱 Text (208) 410-5417</a>
-    </div>
+<!-- Clean Solid Color Hero (NO background image) -->
+<div class="hero-simple">
+    <h2>Full Body Massage</h2>
+    <p>Clean · Safe · Professional · Seniors Welcome</p>
+    <p>Walk-ins welcome · No appointment needed</p>
+
+    <a href="sms:2084105417" class="btn-call">📱 Text (208) 410-5417</a>
 </div>
 
 <div class="container">
@@ -227,11 +212,6 @@
             <div class="service-name">90 Minutes · Full Body</div>
             <div class="service-price">$110</div>
         </div>
-
-        <p style="margin-top: 22px; font-size: 18px; color: #444;">
-            <strong>Walk-ins are always welcome.</strong><br>
-            You may text ahead if you prefer, but it is not required.
-        </p>
     </div>
 
     <!-- Address & Hours -->
