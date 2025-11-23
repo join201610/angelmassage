@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel Massage - Twin Falls, ID</title>
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* ----------- Overall Theme ----------- */
         :root {
-            --cream: #F8F5F0;      /* 温暖奶油色背景 */
-            --green: #355E47;      /* 深绿色标题 */
-            --brown: #7A4A2F;      /* 温暖点缀色 */
+            --cream: #F8F5F0;      /* Warm cream background */
+            --green: #355E47;      /* Deep green for titles */
+            --brown: #7A4A2F;      /* Warm accent color */
             --text: #333;
             --box: #ffffff;
             --border: #dacfbf;
@@ -23,7 +24,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            font-size: 18px;
+            font-size: 18px;          /* Larger for seniors */
             line-height: 1.7;
             color: var(--text);
         }
@@ -33,7 +34,10 @@
             color: var(--green);
         }
 
-        a { color: var(--green); text-decoration: none; }
+        a {
+            color: var(--green);
+            text-decoration: none;
+        }
 
         /* ----------- Header ----------- */
         header {
@@ -67,7 +71,7 @@
         }
 
         .hero-box {
-            background: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.88);
             padding: 36px;
             border-radius: 6px;
             border: 1px solid var(--border);
@@ -75,7 +79,16 @@
             max-width: 80%;
         }
 
-        .hero h2 { font-size: 34px; margin-bottom: 10px; }
+        .hero h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 8px 0 0;
+        }
 
         .btn-call {
             display: inline-block;
@@ -86,6 +99,10 @@
             font-size: 22px;
             border-radius: 5px;
             font-weight: bold;
+        }
+
+        .btn-call:hover {
+            background: #6a3c22;
         }
 
         /* ----------- Container ----------- */
@@ -118,9 +135,14 @@
             font-size: 20px;
         }
 
-        .service-row:last-child { border-bottom: none; }
+        .service-row:last-child {
+            border-bottom: none;
+        }
 
-        .service-name { font-weight: bold; }
+        .service-name {
+            font-weight: bold;
+        }
+
         .service-price {
             color: var(--brown);
             font-weight: bold;
@@ -153,10 +175,18 @@
 
         /* ----------- Mobile ----------- */
         @media (max-width: 700px) {
-            .info-grid { grid-template-columns: 1fr; }
-            .hero { height: 300px; }
-            .logo { font-size: 34px; }
-            .btn-call { font-size: 20px; }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                height: 300px;
+            }
+            .logo {
+                font-size: 34px;
+            }
+            .btn-call {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -171,7 +201,8 @@
 <div class="hero">
     <div class="hero-box">
         <h2>Full Body Massage</h2>
-        <p style="font-size: 20px; font-weight: 600;">Clean · Safe · Professional · Seniors Welcome</p>
+        <p class="hero-text">Clean · Safe · Professional · Seniors Welcome</p>
+        <p class="hero-text">Walk-ins welcome · No appointment required</p>
         <a href="sms:2084105417" class="btn-call">📱 Text (208) 410-5417</a>
     </div>
 </div>
@@ -197,9 +228,9 @@
             <div class="service-price">$110</div>
         </div>
 
-        <p style="margin-top: 20px; font-size: 17px; color: #666;">
-            * We offer full body massage only.  
-            * No separate neck, shoulder, or foot-only services.
+        <p style="margin-top: 22px; font-size: 18px; color: #444;">
+            <strong>Walk-ins are always welcome.</strong><br>
+            You may text ahead if you prefer, but it is not required.
         </p>
     </div>
 
@@ -231,7 +262,7 @@
 </div>
 
 <footer>
-    © 2025 Angel Massage • Twin Falls, Idaho
+    © 2025 Angel Massage · Twin Falls, Idaho
 </footer>
 
 </body>
