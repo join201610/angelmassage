@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel Massage - Twin Falls, ID</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -59,7 +58,7 @@
             color: var(--brown);
         }
 
-        /* ----------- Simple Hero (NO image) ----------- */
+        /* ----------- Simple Hero ----------- */
         .hero-simple {
             background: var(--cream);           /* Warm solid color */
             padding: 45px 20px;
@@ -84,10 +83,11 @@
             margin-top: 18px;
             padding: 14px 34px;
             background: var(--brown);
-            color: #fff;
+            color: #fff !important;
             font-size: 22px;
             border-radius: 5px;
             font-weight: bold;
+            transition: background 0.3s;
         }
 
         .btn-call:hover {
@@ -153,6 +153,13 @@
             border-radius: 5px;
         }
 
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             background: #333;
@@ -183,18 +190,16 @@
     <div class="tagline">Relaxation & Wellness in Twin Falls</div>
 </header>
 
-<!-- Clean Solid Color Hero (NO background image) -->
 <div class="hero-simple">
     <h2>Full Body Massage</h2>
     <p>Clean · Safe · Professional · Seniors Welcome</p>
     <p>Walk-ins welcome · No appointment needed</p>
 
-    <a href="sms:2084105417" class="btn-call">📱 Text (208) 410-5417</a>
+    <a href="tel:2084105417" class="btn-call">📞 Call (208) 410-5417</a>
 </div>
 
 <div class="container">
 
-    <!-- Services -->
     <div class="section">
         <h2>Services & Prices</h2>
 
@@ -214,7 +219,6 @@
         </div>
     </div>
 
-    <!-- Address & Hours -->
     <div class="section">
         <h2>Visit Us</h2>
 
@@ -225,7 +229,7 @@
                     1041 Blue Lakes Blvd N<br>
                     Twin Falls, ID 83301
                 </p>
-                <a href="https://www.google.com/maps?q=1041+Blue+Lakes+Blvd+N,+Twin+Falls,+ID+83301"
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Angel+Massage+1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
                    target="_blank">Open in Google Maps →</a>
             </div>
 
