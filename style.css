@@ -1,115 +1,447 @@
-/* 全局：暖色、稳重、适合老人阅读 */
-body {
-  margin: 0;
-  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-  background: #f6f1e7;          /* 暖米色底 */
-  color: #333;
-  line-height: 1.7;
-  font-size: 18px;              /* 字大一点 */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel Massage - Twin Falls, ID</title>
 
-/* 顶部区域 */
-.hero {
-  padding: 60px 20px 40px;
-  text-align: center;
-  background: #e3d5c3;          /* 稍深一点的暖色条 */
-  border-bottom: 1px solid #d2c2ad;
-}
+  <!-- Optional: nicer serif for headings (still clean) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-h1 {
-  margin: 0;
-  font-size: 32px;
-  letter-spacing: 2px;
-  color: #2f2f2f;
-  font-weight: 600;
-}
+  <style>
+    /* =========================
+       Warm, calm, senior-friendly
+       Clean & professional (no "spa romance" vibe)
+       ========================= */
 
-.sub {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #4f4f4f;
-}
+    :root{
+      --bg: #f6f1e7;          /* warm beige */
+      --hero: #e3d5c3;        /* deeper warm band */
+      --card: #ffffff;
+      --text: #2f2f2f;
+      --muted: #555;
+      --border: #e0d4c4;
+      --hair: #eee0cf;        /* light divider */
+      --accent: #3d6fb3;      /* calm blue */
+      --accent2:#2f5f9b;
+      --gold: #c9b79f;        /* warm outline */
+      --shadow: 0 6px 18px rgba(0,0,0,.07);
+      --r: 12px;
+      --max: 760px;
+    }
 
-/* 预约按钮：大、好点、不像游戏按钮 */
-.glass-btn {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 12px 26px;
-  background: #ffffff;
-  border-radius: 24px;
-  border: 1px solid #c9b79f;
-  text-decoration: none;
-  color: #333;
-  font-size: 17px;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-}
+    *{ box-sizing: border-box; }
 
-.glass-btn:hover {
-  background: #f5eee3;
-}
+    body{
+      margin: 0;
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 18px;
+    }
 
-/* 内容区：像老牌诊所的公告板 */
-.section {
-  background: #ffffff;
-  max-width: 700px;
-  margin: 24px auto;
-  padding: 24px 22px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  border: 1px solid #e0d4c4;
-}
+    /* Improve tap targets & readability */
+    a, button{
+      -webkit-tap-highlight-color: transparent;
+    }
 
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-}
+    /* Header / Hero */
+    .hero{
+      padding: 56px 18px 34px;
+      text-align: center;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          rgba(47,47,47,0.03),
+          rgba(47,47,47,0.03) 1px,
+          transparent 1px,
+          transparent 14px
+        ),
+        var(--hero);
+      border-bottom: 1px solid rgba(0,0,0,.10);
+    }
 
-/* 价目表：简单清晰 */
-.price-list .item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee0cf;
-  font-size: 18px;
-}
+    h1{
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1.5px;
+      color: var(--text);
+      font-weight: 700;
+    }
 
-.price-list .item:last-child {
-  border-bottom: none;
-}
+    .sub{
+      margin: 12px auto 0;
+      max-width: 720px;
+      font-size: 16px;
+      color: var(--muted);
+    }
 
-/* 地图按钮 */
-.map-btn {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 10px 18px;
-  background: #3d6fb3;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 16px;
-}
+    .hero-badges{
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.map-btn:hover {
-  background: #335d95;
-}
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,.55);
+      font-size: 14px;
+      color: #3f3f3f;
+    }
 
-/* 链接颜色 */
-a {
-  color: #3d6fb3;
-  text-decoration: none;
-}
+    /* CTA buttons */
+    .cta-row{
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    .btn{
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      min-height: 44px; /* good tap size */
+    }
 
-/* 页脚 */
-footer {
-  text-align: center;
-  padding: 24px;
-  font-size: 14px;
-  color: #666;
-}
+    .btn-call{
+      background: #ffffff;
+      border: 1px solid var(--gold);
+      color: var(--text);
+    }
+    .btn-call:hover{
+      background: #f5eee3;
+    }
+
+    .btn-map{
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .btn-map:hover{
+      background: var(--accent2);
+    }
+
+    .mini-note{
+      margin-top: 12px;
+      font-size: 14px;
+      color: #5f5f5f;
+    }
+
+    /* Layout container */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 16px 24px;
+    }
+
+    /* Card sections */
+    .section{
+      background: var(--card);
+      margin: 22px auto;
+      padding: 22px 18px;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    /* small corner detail (subtle, not fancy) */
+    .section::after{
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      border-top: 2px solid rgba(201,183,159,.55);
+      border-right: 2px solid rgba(201,183,159,.55);
+      border-radius: 0 10px 0 0;
+      pointer-events: none;
+    }
+
+    h2{
+      margin: 0 0 12px 0;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: .2px;
+    }
+
+    .lead{
+      margin: 0 0 12px 0;
+      font-size: 15px;
+      color: #5a5a5a;
+    }
+
+    /* Decorative divider line */
+    .divider{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0 6px;
+      opacity: .8;
+    }
+    .divider::before,
+    .divider::after{
+      content:"";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(to right, transparent, rgba(0,0,0,.18));
+    }
+    .divider::after{
+      background: linear-gradient(to left, transparent, rgba(0,0,0,.18));
+    }
+    .divider span{
+      color: #7a5a3f;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    /* Price list */
+    .price-list .item{
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hair);
+      font-size: 18px;
+    }
+    .price-list .item:last-child{ border-bottom: none; }
+
+    .item .name{
+      font-weight: 800;
+      color: var(--text);
+    }
+    .item .note{
+      display:block;
+      margin-top: 2px;
+      font-size: 14px;
+      color: #6a6a6a;
+      font-weight: 500;
+    }
+    .item .price{
+      font-weight: 900;
+      white-space: nowrap;
+      color: #6b3f24;
+    }
+
+    /* Info rows */
+    .info-row{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .info-box{
+      background: #fbfaf7;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 14px;
+    }
+
+    .info-box h3{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 900;
+      color: #3a3a3a;
+      font-family: "Playfair Display", Georgia, serif;
+      letter-spacing: .2px;
+    }
+
+    .big{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .hours{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+      color: #355e47;
+    }
+
+    /* Links */
+    a{
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+
+    .map-link{
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    /* Professional boundary note (prevents weird customers) */
+    .policy{
+      margin: 10px 0 0;
+      padding: 12px 12px;
+      border-radius: 10px;
+      background: #f2f6fb;
+      border: 1px solid rgba(61,111,179,.25);
+      color: #4b5f78;
+      font-size: 14px;
+    }
+    .policy ul{
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+    .policy li{
+      margin: 6px 0;
+    }
+
+    footer{
+      text-align: center;
+      padding: 22px 14px 30px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Mobile */
+    @media (max-width: 720px){
+      h1{ font-size: 30px; }
+      .info-row{ grid-template-columns: 1fr; }
+      .btn{ width: 100%; max-width: 520px; text-align: center; }
+      .hero{ padding: 52px 16px 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>ANGEL MASSAGE</h1>
+    <div class="sub">Relaxation & Wellness in Twin Falls, Idaho</div>
+
+    <div class="hero-badges" aria-label="Key notes">
+      <span class="badge">Clean</span>
+      <span class="badge">Safe</span>
+      <span class="badge">Professional</span>
+      <span class="badge">Seniors Welcome</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:2084105417" aria-label="Call Angel Massage">
+        📞 Call (208) 410-5417
+      </a>
+      <a class="btn btn-map"
+         href="https://www.google.com/maps/search/?api=1&query=Angel+Massage+1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
+         target="_blank" rel="noopener"
+         aria-label="Open in Google Maps">
+        📍 Directions
+      </a>
+    </div>
+
+    <div class="mini-note">Walk-ins welcome · Appointments available</div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="section" aria-label="Services and prices">
+      <h2>Services & Prices</h2>
+      <p class="lead">Simple pricing. Professional massage only.</p>
+      <div class="divider"><span>✦ ✦ ✦</span></div>
+
+      <div class="price-list">
+        <div class="item">
+          <div>
+            <span class="name">30 Minutes · Full Body</span>
+            <span class="note">Relaxation or targeted tension relief</span>
+          </div>
+          <div class="price">$50</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <span class="name">60 Minutes · Full Body</span>
+            <span class="note">Most popular · balanced full-body session</span>
+          </div>
+          <div class="price">$70</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <span class="name">90 Minutes · Full Body</span>
+            <span class="note">Deep relaxation · full-body focus</span>
+          </div>
+          <div class="price">$110</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <span class="name">Couples Massage · 60 Minutes</span>
+            <span class="note">Two licensed massage therapists · same time (couples, family, or friends)</span>
+          </div>
+          <div class="price">$140</div>
+        </div>
+      </div>
+
+      <div class="policy" aria-label="Professional policies">
+        <strong>Professional policy:</strong>
+        <ul>
+          <li>Professional massage services only. Inappropriate requests are not accepted.</li>
+          <li>Please arrive sober and respectful. We reserve the right to refuse service for safety.</li>
+          <li>Tips are appreciated but never required.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Visit information">
+      <h2>Visit Us</h2>
+      <p class="lead">Easy parking and convenient location.</p>
+      <div class="divider"><span>✦ ✦ ✦</span></div>
+
+      <div class="info-row">
+        <div class="info-box">
+          <h3>📍 Address</h3>
+          <p class="big">
+            1041 Blue Lakes Blvd N<br />
+            Twin Falls, ID 83301
+          </p>
+          <a class="map-link"
+             href="https://www.google.com/maps/search/?api=1&query=Angel+Massage+1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
+             target="_blank" rel="noopener">
+            Open in Google Maps →
+          </a>
+        </div>
+
+        <div class="info-box">
+          <h3>🕒 Hours</h3>
+          <p class="hours">
+            9:00 AM – 8:00 PM<br />
+            Open 7 Days
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Angel Massage · Twin Falls, Idaho
+  </footer>
+
+</body>
+</html>
