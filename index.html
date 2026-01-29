@@ -28,7 +28,7 @@
       --soft:#F2F7F4;
       --softBorder:#d7e7dc;
       --shadow:0 10px 30px rgba(0,0,0,.06);
-      --r:12px;
+      --r:10px;
     }
 
     *{ box-sizing:border-box; }
@@ -36,6 +36,7 @@
     body{
       background:var(--cream);
       margin:0;
+      padding:0;
       font-family:'Lato', sans-serif;
       font-size:18px;
       line-height:1.7;
@@ -46,15 +47,17 @@
       font-family:'Playfair Display', serif;
       color:var(--green);
       margin:0 0 12px 0;
-      line-height:1.15;
+      line-height:1.2;
     }
 
-    a{ color:var(--green); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    a{
+      color:var(--green);
+      text-decoration:none;
+    }
 
     header{
       text-align:center;
-      padding:30px 16px;
+      padding:32px 16px;
       background:#fff;
       border-bottom:4px solid var(--green);
     }
@@ -72,41 +75,39 @@
       color:var(--brown);
     }
 
-    /* Spanish helper line (small + muted) */
-    .es{
-      display:block;
-      margin-top:6px;
-      font-size:14px;
-      font-weight:500;
-      color:#6b6b6b;
-    }
-
     .hero{
-      padding:40px 18px 34px;
+      padding:40px 18px;
       text-align:center;
       border-bottom:1px solid var(--border);
-      background:linear-gradient(180deg, #f8f5f0 0%, #fbfaf7 100%);
+      background:var(--cream);
     }
 
-    .hero h2{ font-size:34px; margin-bottom:12px; }
+    .hero h2{
+      font-size:34px;
+      margin-bottom:12px;
+    }
 
     .hero p{
       margin:6px 0;
       font-size:19px;
-      font-weight:700;
+      font-weight:600;
       color:var(--text);
     }
 
-    .hero .note{
-      display:inline-block;
-      margin-top:14px;
-      padding:10px 14px;
-      background:var(--soft);
-      border:1px solid var(--softBorder);
-      border-radius:10px;
+    .hero .sub{
+      font-size:16px;
+      font-weight:500;
       color:var(--muted);
+      margin-top:10px;
+    }
+
+    /* Spanish helper line (small + muted) */
+    .es{
+      display:block;
+      margin-top:4px;
       font-size:14px;
-      font-weight:600;
+      font-weight:500;
+      color:#6b6b6b;
     }
 
     .cta-row{
@@ -118,350 +119,9 @@
     }
 
     .btn{
-      padding:14px 22px;
-      border-radius:10px;
-      font-weight:800;
-      font-size:18px;
       display:inline-block;
-      transition:transform .05s ease, background .2s ease, box-shadow .2s ease;
-      box-shadow:0 6px 16px rgba(0,0,0,.06);
-    }
-    .btn:active{ transform:translateY(1px); }
-
-    .btn-call{
-      background:var(--brown);
-      color:#fff !important;
-    }
-    .btn-call:hover{ background:#6a3c22; text-decoration:none; }
-
-    .btn-map{
-      background:#fff;
-      border:1px solid var(--border);
-      color:var(--green) !important;
-    }
-    .btn-map:hover{ background:#faf8f5; text-decoration:none; }
-
-    .container{
-      max-width:920px;
-      margin:30px auto;
-      padding:0 18px;
-    }
-
-    .section{
-      background:#fff;
-      border:1px solid var(--border);
-      border-top:5px solid var(--green);
-      border-radius:var(--r);
-      padding:28px;
-      box-shadow:var(--shadow);
-      margin-bottom:22px;
-    }
-
-    .section h2{
-      font-size:28px;
-      margin-bottom:14px;
-    }
-
-    .service-row{
-      display:flex;
-      justify-content:space-between;
-      gap:14px;
-      padding:14px 0;
-      border-bottom:1px dashed #cfc7bd;
-    }
-    .service-row:last-child{ border-bottom:none; }
-
-    .service-left{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      min-width:0;
-    }
-
-    .service-name{
-      font-weight:900;
-      color:var(--text);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    .service-sub{
-      font-size:14px;
-      font-weight:600;
-      color:var(--muted);
-    }
-
-    .service-price{
-      font-weight:900;
-      color:var(--brown);
-      white-space:nowrap;
-      min-width:86px;
-      text-align:right;
-    }
-
-    .policy{
-      margin-top:14px;
-      padding:14px 14px;
-      background:var(--soft);
-      border:1px solid var(--softBorder);
-      border-radius:10px;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:600;
-    }
-    .policy ul{ margin:8px 0 0 18px; }
-    .policy li{ margin:6px 0; }
-
-    .info-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-      align-items:stretch;
-    }
-
-    .info-box{
-      background:var(--soft);
-      border:1px solid var(--softBorder);
-      padding:18px;
-      border-radius:10px;
-    }
-
-    .info-box p{ margin:0; font-weight:700; color:var(--text); }
-    .muted{ color:var(--muted); font-weight:600; }
-
-    footer{
-      text-align:center;
-      background:#2f2f2f;
-      color:#fff;
-      padding:22px 14px;
-      font-size:14px;
-      margin-top:18px;
-    }
-
-    @media (max-width:720px){
-      .info-grid{ grid-template-columns:1fr; }
-      .btn{ width:100%; text-align:center; max-width:420px; }
-      .hero h2{ font-size:30px; }
-      .logo{ font-size:34px; }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">ANGEL MASSAGE</div>
-  <div class="tagline">
-    Relaxation & Wellness in Twin Falls
-    <span class="es">Relajación y bienestar en Twin Falls</span>
-  </div>
-</header>
-
-<section class="hero" aria-label="Hero">
-  <h2>
-    Full-Body Massage
-    <span class="es">Masaje de cuerpo completo</span>
-  </h2>
-
-  <p>
-    Clean · Safe · Professional · Seniors Welcome
-    <span class="es">Limpio · Seguro · Profesional · Bienvenidos Seniors</span>
-  </p>
-
-  <p>
-    Walk-ins Welcome · Appointments Available
-    <span class="es">Sin cita · Citas disponibles</span>
-  </p>
-
-  <div class="cta-row">
-    <a href="tel:2084105417" class="btn btn-call" aria-label="Call Angel Massage">
-      📞 Call (208) 410-5417
-      <span class="es">Llamar</span>
-    </a>
-
-    <a
-      href="https://www.google.com/maps/dir/?api=1&destination=1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
-      target="_blank"
-      rel="noopener"
-      class="btn btn-map"
-      aria-label="Open in Google Maps"
-    >
-      📍 Directions
-      <span class="es">Cómo llegar</span>
-    </a>
-  </div>
-
-  <div class="note">
-    Professional services only · No inappropriate requests
-    <span class="es">Solo masajes profesionales · No se aceptan solicitudes inapropiadas</span>
-  </div>
-</section>
-
-<main class="container">
-
-  <section class="section" aria-label="Services and prices">
-    <h2>
-      Services & Prices
-      <span class="es">Servicios y precios</span>
-    </h2>
-
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          30 Minutes · Full Body
-          <span class="es">30 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Relaxation-focused session
-          <span class="es">Sesión enfocada en relajación</span>
-        </div>
-      </div>
-      <div class="service-price">$50</div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          60 Minutes · Full Body
-          <span class="es">60 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Most popular · balanced full-body session
-          <span class="es">Más popular · sesión equilibrada</span>
-        </div>
-      </div>
-      <div class="service-price">$70</div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          90 Minutes · Full Body
-          <span class="es">90 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Deep relaxation · full-body focus
-          <span class="es">Relajación profunda · enfoque cuerpo completo</span>
-        </div>
-      </div>
-      <div class="service-price">$110</div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          Couples Massage · 60 Minutes
-          <span class="es">Masaje en pareja · 60 minutos</span>
-        </div>
-        <div class="service-sub">
-          Same time · two therapists available
-          <span class="es">Al mismo tiempo · dos terapeutas disponibles</span>
-        </div>
-      </div>
-      <div class="service-price">$140</div>
-    </div>
-
-    <div class="policy" aria-label="Policies">
-      <strong>
-        Policies
-        <span class="es">Políticas</span>
-      </strong>
-      <ul>
-        <li>
-          Professional services only. Inappropriate requests are not accepted.
-          <span class="es">Solo masajes profesionales. No se aceptan solicitudes inapropiadas.</span>
-        </li>
-        <li>
-          Please arrive sober and respectful. We reserve the right to refuse service for safety.
-          <span class="es">Por seguridad, por favor llegue sobrio/a y con respeto. Nos reservamos el derecho de negar el servicio.</span>
-        </li>
-        <li>
-          Tips are appreciated but never required.
-          <span class="es">Las propinas se agradecen, pero no son obligatorias.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" aria-label="Visit us">
-    <h2>
-      Visit Us
-      <span class="es">Visítanos</span>
-    </h2>
-
-    <div class="info-grid">
-
-      <div class="info-box">
-        <h3>
-          📍 Address
-          <span class="es">Dirección</span>
-        </h3>
-        <p>
-          1041 Blue Lakes Blvd N<br>
-          Twin Falls, ID 83301
-        </p>
-        <p class="muted">
-          Easy parking · Convenient location
-          <span class="es">Estacionamiento fácil · Ubicación conveniente</span>
-        </p>
-      </div>
-
-      <div class="info-box">
-        <h3>
-          🕒 Hours
-          <span class="es">Horario</span>
-        </h3>
-        <p>
-          9:00 AM – 8:00 PM<br>
-          Open 7 Days
-        </p>
-        <p class="muted">
-          Walk-ins welcome
-          <span class="es">Sin cita disponible</span>
-        </p>
-      </div>
-
-      <div class="info-box">
-        <h3>
-          ✉️ Email
-          <span class="es">Correo</span>
-        </h3>
-        <p>
-          <a href="mailto:chenlin201610@gmail.com">chenlin201610@gmail.com</a>
-        </p>
-        <p class="muted">
-          For questions and verification
-          <span class="es">Para preguntas y verificación</span>
-        </p>
-      </div>
-
-      <div class="info-box">
-        <h3>
-          📍 Directions
-          <span class="es">Cómo llegar</span>
-        </h3>
-        <p>
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
-            target="_blank"
-            rel="noopener"
-          >Open in Google Maps →</a>
-        </p>
-        <p class="muted">
-          Tap for navigation
-          <span class="es">Toque para navegación</span>
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  © 2026 Angel Massage · Twin Falls, Idaho
-</footer>
-
-</body>
-</html>
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:700;
+      font-size:18px;
+      transition:transform .05s ease, background .
