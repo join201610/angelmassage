@@ -1,286 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHG5DG035K"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-MHG5DG035K');
   </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Angel Massage - Best Full Body Massage in Twin Falls, ID</title>
-  <meta name="description" content="Professional full body massage in Twin Falls, ID. Clean, safe, and relaxing environment. Custom full-body or foot-focused sessions. Walk-ins welcome. Se habla Español.">
-  
+  <meta name="description" content="Professional full body massage in Twin Falls, ID. Clean, safe, and relaxing environment. Custom full-body or foot-focused sessions. Optional cupping, gua sha & hot stone. Walk-ins welcome. Se habla Español.">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --cream: #F8F5F0;
-      --green: #355E47;
-      --brown: #7A4A2F;
-      --text: #2f2f2f;
-      --muted: #5a5a5a;
-      --box: #ffffff;
-      --border: #dacfbf;
-      --soft: #F2F7F4;
-      --softBorder: #d7e7dc;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
-      --r: 12px;
+    :root{
+      --cream:#F8F5F0;
+      --green:#355E47;
+      --brown:#7A4A2F;
+      --text:#2f2f2f;
+      --muted:#5a5a5a;
+      --border:#dacfbf;
+      --soft:#F2F7F4;
+      --softBorder:#d7e7dc;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --r:12px;
     }
 
-    * { box-sizing: border-box; }
+    *{box-sizing:border-box;}
+    body{
+      background:var(--cream);
+      margin:0;
+      font-family:'Lato',sans-serif;
+      font-size:18px;
+      line-height:1.6;
+      color:var(--text);
+    }
+    html{scroll-behavior:smooth;}
+    h1,h2,h3{
+      font-family:'Playfair Display',serif;
+      color:var(--green);
+      margin:0 0 12px;
+    }
+    a{color:var(--green);text-decoration:none;}
+    a:hover{text-decoration:underline;}
 
-    body {
-      background: var(--cream);
-      margin: 0;
-      padding: 0;
-      font-family: 'Lato', sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--text);
+    header{
+      text-align:center;
+      padding:25px 16px;
+      background:#fff;
+      border-bottom:4px solid var(--green);
+    }
+    .logo{font-size:38px;font-weight:700;}
+    .tagline{font-size:16px;color:var(--brown);font-style:italic;}
+
+    .es{
+      display:block;
+      font-size:14px;
+      color:#666;
+      margin-top:4px;
     }
 
-    html { scroll-behavior: smooth; }
+    .hero{
+      padding:40px 20px;
+      text-align:center;
+      background:linear-gradient(#fff,var(--cream));
+      border-bottom:1px solid var(--border);
+    }
+    .hero h2{font-size:32px;}
+    .hero p{font-size:19px;font-weight:700;}
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--green);
-      margin: 0 0 12px 0;
-      line-height: 1.2;
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:24px;
     }
 
-    a { color: var(--green); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    .btn{
+      padding:14px 24px;
+      border-radius:8px;
+      font-size:18px;
+      font-weight:700;
+      box-shadow:0 4px 6px rgba(0,0,0,.1);
+      display:inline-block;
+    }
+    .btn-call{background:var(--brown);color:#fff;}
+    .btn-map{background:#fff;border:1px solid var(--border);}
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 25px 16px;
-      background: #fff;
-      border-bottom: 4px solid var(--green);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .note{
+      margin-top:20px;
+      padding:10px 16px;
+      background:var(--soft);
+      border-radius:50px;
+      font-size:14px;
+      color:var(--muted);
     }
 
-    .logo {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: var(--green);
+    .container{
+      max-width:800px;
+      margin:30px auto;
+      padding:0 16px;
     }
 
-    .tagline {
-      font-size: 16px;
-      margin-top: 6px;
-      font-style: italic;
-      color: var(--brown);
+    .section{
+      background:#fff;
+      border:1px solid var(--border);
+      border-top:5px solid var(--green);
+      border-radius:var(--r);
+      padding:24px;
+      box-shadow:var(--shadow);
+      margin-bottom:30px;
     }
 
-    /* Helper for Spanish text */
-    .es {
-      display: block;
-      margin-top: 4px;
-      font-size: 0.85em; 
-      font-weight: 500;
-      color: #666;
-      opacity: 0.9;
+    .service-row{
+      display:flex;
+      justify-content:space-between;
+      padding:16px 0;
+      border-bottom:1px dashed #ddd;
+    }
+    .service-row:last-child{border-bottom:none;}
+    .service-name{font-weight:800;}
+    .service-price{color:var(--brown);font-weight:800;}
+
+    .foot-note{
+      text-align:center;
+      margin:15px 0;
+      padding:14px;
+      background:#fafafa;
+      border:1px dashed #ccc;
+      border-radius:8px;
+      font-weight:700;
+      color:var(--green);
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(to bottom, #fff 0%, var(--cream) 100%);
+    .policy{
+      margin-top:20px;
+      padding:16px;
+      background:var(--soft);
+      border-radius:8px;
+      font-size:15px;
+      color:var(--muted);
     }
 
-    .hero h2 { font-size: 32px; margin-bottom: 16px; }
-    
-    .hero p {
-      margin: 8px 0;
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--text);
+    .info-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
     }
 
-    .hero .note {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 16px;
-      background: var(--soft);
-      border: 1px solid var(--softBorder);
-      border-radius: 50px; 
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
+    .info-box{
+      background:#fff;
+      border:1px solid var(--softBorder);
+      padding:18px;
+      border-radius:8px;
+      text-align:center;
     }
 
-    /* Buttons */
-    .cta-row {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 24px;
+    footer{
+      text-align:center;
+      background:#2f2f2f;
+      color:#ccc;
+      padding:30px 20px;
+      font-size:14px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 18px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .btn:hover {
-      text-decoration: none;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    .btn:active {
-      transform: translateY(1px);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .btn-call {
-      background: var(--brown);
-      color: #fff !important;
-      border: 1px solid var(--brown);
-    }
-    .btn-call:hover { background: #633b24; }
-
-    .btn-map {
-      background: #fff;
-      color: var(--green) !important;
-      border: 1px solid var(--border);
-    }
-    .btn-map:hover { background: #fcfcfc; }
-
-    /* Main Container */
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 16px;
-    }
-
-    .section {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-top: 5px solid var(--green);
-      border-radius: var(--r);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      border-bottom: 2px solid var(--soft);
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    /* Service List */
-    .service-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 16px 0;
-      border-bottom: 1px dashed #e0dcd5;
-    }
-    .service-row:last-child { border-bottom: none; }
-
-    .service-left { flex: 1; padding-right: 10px; }
-    
-    .service-name {
-      font-weight: 800;
-      font-size: 18px;
-      color: var(--text);
-    }
-    
-    .service-sub {
-      font-size: 15px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .service-price {
-      font-weight: 800;
-      font-size: 20px;
-      color: var(--brown);
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    /* Foot Note Style - Subtle yet visible */
-    .foot-note {
-      text-align: center;
-      margin: 10px 0 20px 0;
-      padding: 14px;
-      background: #fafafa;
-      border: 1px dashed #dcdcdc; /* Dashed border suggests optionality */
-      border-radius: 8px;
-      color: var(--green);
-      font-weight: 700;
-      font-size: 16px;
-    }
-
-    /* Policy Box */
-    .policy {
-      margin-top: 20px;
-      padding: 16px;
-      background: var(--soft);
-      border-radius: 8px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .policy ul { margin: 8px 0 0 20px; padding: 0; }
-    .policy li { margin-bottom: 6px; }
-
-    /* Info Grid */
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .info-box {
-      background: #fff;
-      border: 1px solid var(--softBorder);
-      padding: 18px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    
-    .info-box h3 { font-size: 18px; margin-bottom: 8px; color: var(--green); }
-    .info-box p { margin: 0; font-weight: 600; color: var(--text); }
-    .info-box .muted { color: var(--muted); font-weight: 500; font-size: 14px; margin-top: 4px;}
-
-    /* Footer */
-    footer {
-      text-align: center;
-      background: #2f2f2f;
-      color: #ccc;
-      padding: 30px 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    /* Mobile Adjustments */
-    @media (max-width: 600px) {
-      .info-grid { grid-template-columns: 1fr; }
-      .btn { width: 100%; display: block; margin-bottom: 10px; }
-      .service-name { font-size: 17px; }
-      .logo { font-size: 32px; }
+    @media(max-width:600px){
+      .info-grid{grid-template-columns:1fr;}
+      .btn{width:100%;text-align:center;}
+      .logo{font-size:32px;}
     }
   </style>
 </head>
@@ -312,161 +206,93 @@
   </p>
 
   <div class="cta-row">
-    <a href="tel:2084105417" class="btn btn-call">
-      📞 Call (208) 410-5417
-      <span class="es">Llamar ahora</span>
-    </a>
-
-    <a 
-      href="https://www.google.com/maps/dir/?api=1&destination=1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301" 
-      target="_blank" 
-      rel="noopener" 
-      class="btn btn-map"
-    >
-      📍 Get Directions
-      <span class="es">Cómo llegar</span>
-    </a>
+    <a href="tel:2084105417" class="btn btn-call">📞 Call (208) 410-5417</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=1041+Blue+Lakes+Blvd+N+Twin+Falls+ID+83301"
+       target="_blank" class="btn btn-map">📍 Get Directions</a>
   </div>
 
   <div class="note">
     Professional services only · No inappropriate requests
-    <span class="es">Solo servicio profesional · No solicitudes inapropiadas</span>
+    <span class="es">Solo servicios profesionales · No solicitudes inapropiadas</span>
   </div>
 </section>
 
 <main class="container">
 
-  <section class="section">
-    <h2>
-      Services & Prices
-      <span class="es">Servicios y precios</span>
-    </h2>
+<section class="section">
+<h2>Services & Prices <span class="es">Servicios y precios</span></h2>
 
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          30 Minutes · Full Body
-          <span class="es">30 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Quick relief & relaxation
-        </div>
-      </div>
-      <div class="service-price">$50</div>
-    </div>
+<div class="service-row">
+  <span class="service-name">30 Minutes · Full Body</span>
+  <span class="service-price">$50</span>
+</div>
 
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          60 Minutes · Full Body
-          <span class="es">60 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Most popular choice
-        </div>
-      </div>
-      <div class="service-price">$70</div>
-    </div>
+<div class="service-row">
+  <span class="service-name">60 Minutes · Full Body</span>
+  <span class="service-price">$70</span>
+</div>
 
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          90 Minutes · Full Body
-          <span class="es">90 minutos · Cuerpo completo</span>
-        </div>
-        <div class="service-sub">
-          Deep tissue & stress relief
-        </div>
-      </div>
-      <div class="service-price">$110</div>
-    </div>
+<div class="service-row">
+  <span class="service-name">90 Minutes · Full Body</span>
+  <span class="service-price">$110</span>
+</div>
 
-    <div class="service-row">
-      <div class="service-left">
-        <div class="service-name">
-          Couples Massage (60 min)
-          <span class="es">Masaje en pareja</span>
-        </div>
-        <div class="service-sub">
-          Two therapists (Subject to availability)
-        </div>
-      </div>
-      <div class="service-price">$140</div>
-    </div>
+<div class="service-row">
+  <span class="service-name">Couples Massage (60 min)</span>
+  <span class="service-price">$140</span>
+</div>
 
-    <div class="foot-note">
-      🦶 Full-body or foot-focused massage available
-      <span class="es">Masaje de cuerpo completo o enfocado en pies</span>
-    </div>
+<div class="foot-note">
+🦶 Full-body or foot-focused massage available  
+<span class="es">Masaje de cuerpo completo o enfocado en pies</span>
+<br><br>
+Optional cupping, gua sha & hot stone upon request · No extra charge  
+<span class="es">Ventosas, gua sha y piedras calientes disponibles a solicitud · Sin costo adicional</span>
+</div>
 
-    <div class="policy">
-      <strong>Policies / Políticas:</strong>
-      <ul>
-        <li>Professional services only. <span class="es">Solo servicios profesionales.</span></li>
-        <li>We reserve the right to refuse service. <span class="es">Nos reservamos el derecho de negar el servicio.</span></li>
-        <li>Tips appreciated. <span class="es">Se agradecen las propinas.</span></li>
-      </ul>
-    </div>
-  </section>
+<div class="policy">
+<ul>
+<li>Professional services only.</li>
+<li>We reserve the right to refuse service.</li>
+<li>Tips appreciated.</li>
+</ul>
+</div>
+</section>
 
-  <section class="section">
-    <h2>
-      Visit Us
-      <span class="es">Visítanos</span>
-    </h2>
+<section class="section">
+<h2>Visit Us <span class="es">Visítanos</span></h2>
 
-    <div class="info-grid">
+<div class="info-grid">
 
-      <div class="info-box">
-        <h3>📍 Address</h3>
-        <p>
-          1041 Blue Lakes Blvd N<br>
-          Twin Falls, ID 83301
-        </p>
-        <p class="muted">
-          <span class="es">Dirección</span>
-        </p>
-      </div>
+<div class="info-box">
+<h3>📍 Address</h3>
+<p>1041 Blue Lakes Blvd N<br>Twin Falls, ID 83301</p>
+</div>
 
-      <div class="info-box">
-        <h3>🕒 Hours</h3>
-        <p>
-          9:00 AM – 8:00 PM<br>
-          Open 7 Days
-        </p>
-        <p class="muted">
-          <span class="es">Horario: Abierto los 7 días</span>
-        </p>
-      </div>
+<div class="info-box">
+<h3>🕒 Hours</h3>
+<p>9:00 AM – 8:00 PM<br>Open 7 Days</p>
+</div>
 
-      <div class="info-box">
-        <h3>✉️ Contact</h3>
-        <p>
-          (208) 410-5417
-        </p>
-        <p class="muted">
-          <a href="mailto:chenlin201610@gmail.com">Email Us</a>
-        </p>
-      </div>
+<div class="info-box">
+<h3>✉️ Contact</h3>
+<p>(208) 410-5417</p>
+<p><a href="mailto:chenlin201610@gmail.com">chenlin201610@gmail.com</a></p>
+</div>
 
-      <div class="info-box">
-        <h3>🚘 Parking</h3>
-        <p>
-          Free Parking Available
-        </p>
-        <p class="muted">
-          <span class="es">Estacionamiento gratis</span>
-        </p>
-      </div>
+<div class="info-box">
+<h3>🚘 Parking</h3>
+<p>Free Parking Available</p>
+</div>
 
-    </div>
-  </section>
+</div>
+</section>
 
 </main>
 
 <footer>
-  © 2026 Angel Massage · Twin Falls, Idaho<br>
-  <small>Relaxation awaits you.</small>
+© 2026 Angel Massage · Twin Falls, Idaho<br>
+Relaxation awaits you.
 </footer>
 
 </body>
